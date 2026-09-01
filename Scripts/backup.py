@@ -13,14 +13,11 @@ device = {
 switches_ip = ['10.0.99.10', '10.0.99.20', '10.0.99.30',
                 '10.0.99.40', '70.70.70.70', '80.80.80.80']
 routers_ip = ['50.50.50.50', '60.60.60.60']
-commands = [
-    'show ip int b',
-    'show run | include vlan'
-]
+backup_folder = '/Users/isaacguediri/GNS3 Project/backup_configurations'
+os.makedirs(backup_folder, exist_ok=True)
+ips = switches_ip + routers_ip
+
 def backup():
-        backup_folder = '/Users/isaacguediri/GNS3 Project/backup_configurations'
-        os.makedirs(backup_folder, exist_ok=True)
-        ips = switches_ip + routers_ip
         for ip in ips:
                 current_device = device.copy()
                 current_device['host'] = ip
