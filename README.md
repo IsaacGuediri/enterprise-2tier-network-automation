@@ -19,7 +19,7 @@ The lab is designed using a hierarchical campus network model comprising 6 switc
 - **Automation Node:**
   - An independent Docker container connected to `D1` via `FastEthernet1/4` for network automation tasks.
 
-![Network Topology](topology.png)
+![Network Topology](images/topology.jpeg)
 
 
 ## 3. Implemented Security Policies
