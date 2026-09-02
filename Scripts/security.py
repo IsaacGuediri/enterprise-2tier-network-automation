@@ -40,7 +40,7 @@ def security_setup():
                 for line in lines[1:]:
                     parts = line.split()
                     has_description = False
-                    if not parts or parts[0].lower().startswith(("interface", "port", "vl", "lo", "nu")):
+                    if not parts or parts[0].lower().startswith(("interface", "port", "vl", "lo", "nu", "po")):
                         continue
                     interface_name = parts[0]
                     if "admin down" in line.lower():
@@ -64,13 +64,14 @@ def security_setup():
                     interface_status = get_interface_status(line)
                     if not interface_status:
                         continue
-                    if interface_status['interface_name'].lower().startswith(("vlan", "loopback", "null")):
+                    if interface_status['interface_name'].lower().startswith(("vlan", "loopback", "null", "po")):
                         continue
                     if interface_status['status'] == 'administratively down' or interface_status['status'] == "down":
                         continue
                     switchport_status = net_connect.send_command(f"show int {interface_status['interface_name']} switchport")
                     if "Switchport: Enabled" in switchport_status and "Administrative Mode: static access" in switchport_status:
                         commands.extend([f"int {interface_status['interface_name']}","switchport mode access","switchport port-security"])
+                        print(f"Enabling Port-Security on {ip} interface: {interface_status['interface_name']}")
                         iterations_count += 1
                 if iterations_count > 0:
                     net_connect.send_config_set(commands)

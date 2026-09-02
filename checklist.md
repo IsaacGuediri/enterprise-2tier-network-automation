@@ -11,29 +11,33 @@ Design Requirements:
 
 * Routing Architecture: 
  OSPF, ✅
- external BGP.
+ static routes. ✅
 
 * Security Policies:
  Port Security, ✅
- DHCP Snooping,
+ DHCP Snooping, ✅
  BPDU Guard, ✅
  BPDU Filter, ✅
  Disabling unused ports, ✅
- ACLs(Extended), ✅
- Disabling CDP & LLDP, ✅
+ ACLs, ✅
+ Disabling CDP, ✅
  Changing all L3 unused/end-points interfaces mode to passive (OSPF). ✅
 
 * Services:
  DHCP Server, ✅
  DNS Server. ✅
 
+ * Automation:
+ Automated Backup, ✅
+ Automated Security, ✅
+ Automated Audit. ✅
+
 STEPS:
 1) configure ip addresses ✅
 2) configure VLANs ✅
 3) Configure OSPF ✅
 4) Configure Rapid STP ✅
-5) Configure eBGP
-6) finish high Avaliability & performance ✅
-7) finish services ✅
-8) finish security 
-9) finish automation ✅
+5) finish high Avaliability & performance ✅
+6) finish services ✅
+7) finish security ✅
+8) finish automation ✅
