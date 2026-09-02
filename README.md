@@ -110,6 +110,5 @@ The lab is built using a collapsed-core (2-Tier) hierarchical network architectu
    python3 Scripts/audit_security.py
 ```
 
-**audit_security.py**
 ![Audit Security](images/audit_script.png)
 
