@@ -16,7 +16,6 @@ Design Requirements:
 * Security Policies:
  Port Security, ✅
  DHCP Snooping,
- DAI,
  BPDU Guard, ✅
  BPDU Filter, ✅
  Disabling unused ports, ✅
@@ -36,5 +35,5 @@ STEPS:
 5) Configure eBGP
 6) finish high Avaliability & performance ✅
 7) finish services ✅
-8) finish security
+8) finish security 
 9) finish automation ✅

@@ -1,12 +1,16 @@
 from netmiko import ConnectHandler
 from netmiko.exceptions import NetmikoAuthenticationException, NetmikoTimeoutException
+#from netmiko.ssh_exception import NetmikoAuthenticationException, NetmikoTimeoutException
 
 device = {
     "device_type": "cisco_ios",
     "host": "",
     "username": "isaac",
-    "password": "",
+    "password": "gns3",
     "secret": "gns3",
+    "global_delay_factor": 2,
+    "banner_timeout": 30,
+    "auth_timeout": 30,
 }
 switches_ip = ['10.0.99.10', '10.0.99.20', '10.0.99.30',
                 '10.0.99.40', '70.70.70.70', '80.80.80.80']
