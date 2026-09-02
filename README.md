@@ -15,7 +15,7 @@ The project is built using a collapsed-core (2-Tier) hierarchical network archit
 - **Access Layer:**
   - `HR`, `IT`, `Marketing`, and `Servers` switches providing Layer 2 access and endpoint segmentation.
 - **Services & Endpoints:**
-  - `SRV1`: Dedicated central DHCP & DNS Server connected directly to the `Servers` switch via `Ethernet1/0`.
+  - `SRV1`: Dedicated central DHCP & DNS Server.
   - Client endpoints: `PC1`, `PC2`, `Admin-PC`, `PC3`, and `PC4`.
 - **Automation Node:**
   - An independent Docker container connected to `D1` via `FastEthernet1/4` executing configuration and security tasks.
