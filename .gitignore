@@ -2,3 +2,5 @@
 __pycache__/
 *.pyc
 checklist.md
+.DS_Store
+**/.DS_Store
