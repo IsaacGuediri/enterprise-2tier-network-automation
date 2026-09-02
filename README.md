@@ -95,7 +95,7 @@ The lab is built using a collapsed-core (2-Tier) hierarchical network architectu
 ```bash
    python3 Scripts/security.py
 ```
-**security.py**
+
 ![Security](images/security_script.png)
 
 5. Run the configuration backup script:
@@ -103,7 +103,6 @@ The lab is built using a collapsed-core (2-Tier) hierarchical network architectu
    python3 Scripts/backup.py
 ```
 
-**backup.py**
 ![Backup](images/backup_script.png)
 
 6. Run the compliance audit script:
