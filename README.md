@@ -18,7 +18,7 @@ The project is built using a collapsed-core (2-Tier) hierarchical network archit
   - `SRV1`: Dedicated central DHCP & DNS Server.
   - Client endpoints: `PC1`, `PC2`, `Admin-PC`, `PC3`, and `PC4`.
 - **Automation Node:**
-  - An independent Docker container connected to `D1` via `FastEthernet1/4` executing configuration and security tasks.
+  - An independent Docker container connected to `D1` executing configuration and security tasks.
 
 ![Network Topology](images/topology.png)
 
