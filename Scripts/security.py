@@ -32,7 +32,7 @@ def security_setup():
             if not net_connect.check_enable_mode():
                 net_connect.enable()
 
-            if DISABLE_UNUSED_INTERFACES:
+            if DISABLE_UNUSED_INTERFACES and ip in switches_ip:
                 output = net_connect.send_command("show interfaces description")
                 lines = str(output).splitlines()
                 iterations_count = 0
@@ -53,10 +53,6 @@ def security_setup():
                 if iterations_count > 0:
                     net_connect.send_config_set(commands)
                     save_config = True
-
-            if DISABLE_CDP:
-                net_connect.send_config_set(["no cdp run"])
-                save_config = True
 
             if ENABLE_PORT_SECURITY and ip in switches_ip:
                 net_connect.send_config_set(["errdisable recovery cause psecure-violation", "errdisable recovery interval 300"])
@@ -80,6 +76,10 @@ def security_setup():
                     net_connect.send_config_set(commands)
                     save_config = True
 
+            if DISABLE_CDP:
+                net_connect.send_config_set(["no cdp run"])
+                save_config = True
+
             if save_config:
                 net_connect.send_command("write memory", delay_factor=4)
                 print(f"Configurations has been saved on {ip}")
@@ -97,7 +97,7 @@ def security_setup():
 def get_interface_status(line):
     parts = line.split()
 
-    if len(parts) < 6:
+    if len(parts) < 5:
         return None
     
     interface_name = parts[0]
