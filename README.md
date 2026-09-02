@@ -83,7 +83,7 @@ The lab is built using a collapsed-core (2-Tier) hierarchical network architectu
 
 ## 6. Execution Guide
 1. Access the console of the `Automation` Docker container in GNS3.
-2. Verify management reachability to target devices:
+2. Verify management reachability to target devices, For example:
 ```bash
    ping -c 3 10.0.99.10
 ```
