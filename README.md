@@ -11,7 +11,7 @@ The project is built using a collapsed-core (2-Tier) hierarchical network archit
 
 - **Collapsed Core / Distribution Layer:**
   - `D1` and `D2` serving as the core routing and aggregation layer, interconnected via redundant trunk links (`f1/14 - 15`).
-  - Edge routing upstream to `R1` and `R2` for external/WAN connectivity.
+  - Edge routing upstream to `R1` and `R2` for external WAN connectivity.
 - **Access Layer:**
   - `HR`, `IT`, `Marketing`, and `Servers` switches providing Layer 2 access and endpoint segmentation.
 - **Services & Endpoints:**
