@@ -7,7 +7,7 @@ The infrastructure incorporates Layer 2 and Layer 3 redundancy, dynamic routing,
 
 
 ## 2. Network Topology
-The lab is built using a collapsed-core (2-Tier) hierarchical network architecture:
+The project is built using a collapsed-core (2-Tier) hierarchical network architecture:
 
 - **Collapsed Core / Distribution Layer:**
   - `D1` and `D2` serving as the core routing and aggregation layer, interconnected via redundant trunk links (`f1/14 - 15`).
