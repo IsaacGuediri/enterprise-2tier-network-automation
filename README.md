@@ -1,4 +1,4 @@
-# [Enterprise 2-Tier Network]
+# Enterprise 2-Tier Network
 
 ## 1. Overview
 This project demonstrates the design, deployment, and programmatic management of a secure, highly available **2-Tier Collapsed Core Enterprise Network**. 
